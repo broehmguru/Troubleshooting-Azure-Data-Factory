@@ -5,5 +5,5 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "DisableNotificationCenter" -Value 1
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "HideSCAVolume" -Value 1
 Install-WindowsFeature "AD-Domain-Services" -IncludeManagementTools | Out-Null
-$pw = ConvertTo-SecureString "p@55w0rd" -AsPlainText -Force
-Install-ADDSForest -DomainName "corp.barrierreefaudio.com" -SafeModeAdministratorPassword $pw -DomainNetBIOSName 'CORP' -InstallDns -Force
+$pw = ConvertTo-SecureString "Pass123456789!" -AsPlainText -Force
+Install-ADDSForest -DomainName "corp.sandynetworking01.com" -SafeModeAdministratorPassword $pw -DomainNetBIOSName 'CORP' -InstallDns -Force
